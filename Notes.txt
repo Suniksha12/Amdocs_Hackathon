@@ -1,0 +1,25 @@
+I m Using redis server, Redis is not officially supported on Windows but can be run using WSL (Windows Subsystem for Linux) or third-party builds.
+ for this :
+wsl --install
+
+Using Memurai or Third-Party Redis Builds:
+
+Download a Redis-compatible build for Windows, such as Memurai.
+
+Start Redis Server
+Run the Redis server:
+redis-server
+
+If running as a background service:
+sudo systemctl start redis
+
+To ensure Redis starts on boot:
+sudo systemctl enable redis
+
+Test Redis
+Open a new terminal and connect to the Redis server using the Redis CLI:
+redis-cli
+
+Run a test command, such as:
+ping
+Redis should reply with PONG.
